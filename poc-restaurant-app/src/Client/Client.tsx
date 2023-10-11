@@ -12,33 +12,16 @@ class Client implements Subscriber {
   private clientId: string;
 
   constructor(clientId: string) {
-    // super(props);
     this.clientId = clientId;
   }
 
-  update(orders: Order[]) {
-    console.log("ORDER CHANGED STATE!", orders);
+  update(order: Order) {
+    // console.log("ORDER CHANGED STATE!", order);
   }
 
   getClientId() {
     return this.clientId;
   }
-
-  createOrder() {}
-
-  // render() {
-  //   return (
-  //     <div className="client">
-  //       <div>client</div>
-  //       <div>
-  //         Client id: <span>{this.clientId}</span>
-  //         <div>
-  //           <button onClick={this.props.onNewOrder}>NEW ORDER</button>
-  //         </div>
-  //       </div>
-  //     </div>
-  //   );
-  // }
 }
 
 export default Client;
